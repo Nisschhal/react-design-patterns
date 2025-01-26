@@ -1,5 +1,5 @@
 const UserInfo = ({ user }: { user?: any }) => {
-  const { name, age, country, books } = user || {}
+  const { name, age, country } = user || {}
 
   return user ? (
     <>
