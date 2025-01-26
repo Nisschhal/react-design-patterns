@@ -1,19 +1,35 @@
-import { useState } from "react"
-import reactLogo from "./assets/react.svg"
-import viteLogo from "/vite.svg"
-import "./App.css"
-import SplitScreen from "./components/SplitScreen"
-import Left from "./components/Left"
-import Right from "./components/Right"
+import SplitScreen from "./components/SplitScreen/SplitScreen"
+import Left from "./components/SplitScreen/Left"
+import Right from "./components/SplitScreen/Right"
+import styled from "styled-components"
+import Regular from "./components/List/lists/Regular"
+import { authors } from "./data/authors"
+import SmallAuthorItems from "./components/List/authors/SmallItems"
+import LargeAuthorItems from "./components/List/authors/LargeItems"
+
+const Heading = styled.h1`
+  text-align: center;
+`
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+      <Heading>Split Screen</Heading>
       <SplitScreen leftWidth={1} rightWidth={3}>
-        <Left title="Lefty" />
-        <Right title="Righty" />
+        <Left title="Small List">
+          <Regular
+            items={authors}
+            sourceName={"author"}
+            ItemComponent={SmallAuthorItems}
+          />
+        </Left>
+        <Right title="Large List">
+          <Regular
+            items={authors}
+            sourceName={"author"}
+            ItemComponent={LargeAuthorItems}
+          />
+        </Right>
       </SplitScreen>
     </>
   )
