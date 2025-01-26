@@ -5,13 +5,13 @@ const Regular = ({
   sourceName,
   ItemComponent,
 }: {
-  items: any[]
+  items: any
   sourceName: any
   ItemComponent: React.ElementType
 }) => {
   return (
     <>
-      {items.map((item, i) => (
+      {items.map((item: any, i: number) => (
         <ItemComponent key={i} {...{ [sourceName]: item }} />
       ))}
     </>

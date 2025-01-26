@@ -6,6 +6,7 @@ import Regular from "./components/List/lists/Regular"
 import { authors } from "./data/authors"
 import SmallAuthorItems from "./components/List/authors/SmallItems"
 import LargeAuthorItems from "./components/List/authors/LargeItems"
+import Modal from "./components/Modal/Modal"
 
 const Heading = styled.h1`
   text-align: center;
@@ -14,6 +15,9 @@ const Heading = styled.h1`
 function App() {
   return (
     <>
+      <Modal>
+        <LargeAuthorItems author={authors[0]} />
+      </Modal>
       <Heading>Split Screen</Heading>
       <SplitScreen leftWidth={1} rightWidth={3}>
         <Left title="Small List">
