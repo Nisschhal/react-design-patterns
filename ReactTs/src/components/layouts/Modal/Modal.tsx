@@ -26,9 +26,9 @@ const Button = styled.div`
   cursor: pointer;
 `
 
-const Modal = ({ children }: { children: ReactNode }) => {
+const Modal = ({ children, user }: { user?: any; children: ReactNode }) => {
   const [show, setShow] = useState(false)
-
+  console.log({ user })
   return (
     <>
       <button onClick={() => setShow(true)}>Show Modal</button>
