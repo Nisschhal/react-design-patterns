@@ -9,6 +9,8 @@ import LargeAuthorItems from "./components/layouts/List/authors/LargeItems"
 import Modal from "./components/layouts/Modal/Modal"
 import CurrentUserLoader from "./components/Container/CurrentUserLoader"
 import UserInfo from "./components/Container/UserInfo"
+import MemoryGame from "./components/react-interview/MemoryGame"
+import { images } from "./data/Images"
 
 const Heading = styled.h1`
   text-align: center;
@@ -17,7 +19,7 @@ const Heading = styled.h1`
 function App() {
   return (
     <>
-      <CurrentUserLoader>
+      {/* <CurrentUserLoader>
         <UserInfo />
         <Modal>
           <LargeAuthorItems author={authors[0]} />
@@ -39,7 +41,8 @@ function App() {
             />
           </Right>
         </SplitScreen>
-      </CurrentUserLoader>
+      </CurrentUserLoader> */}
+      <MemoryGame images={images} />
     </>
   )
 }
