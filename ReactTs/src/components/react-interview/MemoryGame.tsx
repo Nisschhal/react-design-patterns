@@ -7,7 +7,7 @@ export const shuffleArray = (array: string[]) => {
   }
   return shuffled
 }
-
+// card interface
 interface Card {
   id: number
   imageUrl: string
